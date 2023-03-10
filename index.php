@@ -1,6 +1,7 @@
 <?php
 
- //Gerar Senha
+//Gerar Senha
+// echo password_hash("123456", PASSWORD_DEFAULT);
 
 ?>
 
@@ -74,7 +75,7 @@
         </div>
         <div class="modal-body">
           <form id="login-usuario-form">
-            <span id="msgAlertErroLogin" ></span>
+            <span id="msgAlertErroLogin"></span>
             <div class="mb-3">
               <label for="email" class="col-form-label">Usuário</label>
               <input type="text" name="email" class="form-control" id="email" placeholder="Digite o seu email">
@@ -82,7 +83,7 @@
 
             <div class="mb-3">
               <label for="senha" class="col-form-label">Senha</label>
-              <input type="password" name="senha" class="form-control" id="senha"
+              <input type="password" name="senha" class="form-control" id="senha" autocomplete="on"
                 placeholder="Digite a sua senha"></input>
             </div>
             <div class="mb-3">
@@ -98,7 +99,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-    <script src="js/custom.js"></script>
+  <script src="js/custom.js"></script>
 </body>
 
 </html>
