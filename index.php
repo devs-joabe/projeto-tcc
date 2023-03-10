@@ -1,3 +1,9 @@
+<?php
+
+ //Gerar Senha
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
