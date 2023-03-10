@@ -10,5 +10,16 @@ loginForm.addEventListener("submit", async (e) => {
   } else if (document.getElementById("senha").value === "") {
     msgAlertErroLogin.innerHTML =
       " <div class='alert alert-danger' role='alert'> Erro: Necessario preencher o campo usuário! </div>";
+  } else {
+    const dadosForm = new FormData(loginForm);
+
+    const dados = await fetch("validar.php", {
+      method: "POST",
+      body: dadosForm,
+    });
+
+    const resposta = dados.json();
+
+    console.log(resposta);
   }
 });
