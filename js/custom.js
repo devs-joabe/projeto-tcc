@@ -7,10 +7,10 @@ loginForm.addEventListener("submit", async (e) => {
 
   if (document.getElementById("email").value === "") {
     msgAlertErroLogin.innerHTML =
-      " <div class='alert alert-danger' role='alert'> Erro: Necessario preencher o campo usuário! </div>";
+      "<div class='alert alert-danger' role='alert'>Erro: Necessario preencher o campo usuário!</div>";
   } else if (document.getElementById("senha").value === "") {
     msgAlertErroLogin.innerHTML =
-      " <div class='alert alert-danger' role='alert'> Erro: Necessario preencher o campo usuário! </div>";
+      "<div class='alert alert-danger' role='alert'>Erro: Necessario preencher o campo usuário!</div>";
   } else {
     const dadosForm = new FormData(loginForm);
 
@@ -20,8 +20,6 @@ loginForm.addEventListener("submit", async (e) => {
     });
 
     const resposta = await dados.json();
-
-    console.log(resposta);
 
     if (resposta["erro"]) {
       msgAlertErroLogin.innerHTML = resposta["msg"];
